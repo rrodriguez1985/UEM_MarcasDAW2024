@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción HTML</title>
+</head>
+<body>
+    <h1>Introducción a HTML</h1>
+    <br>
+    <h2>Definición de Página Web</h2>
+    Una página es un documento que está formado por etiquetas o tag (marcas), que nos va a permitir mostrar cualquier
+    <br>tipo de información: texto,imágenes, audio, vídeo...
+    <br>Están formadas por etiquetas que están predefinidas: NO nos podemos inventar nombres
+    <br>Para poderlas visualizar, sólamente necesitaremos un navegador web: IE, Edge, Firefox, Chrome, Opera...
+    <br>Para crear páginas web, necesitaremos un Editor: VS Code, Sublime Text, Notepad ++, Atom, XCode... e incluso
+    <br>podemos hacerlo con un block de notas!!!
+    <hr>
+    <h2>Lenguaje de etiquetado HTML</h2>
+    El lenguaje de etiquetado HTML, viene del contexto HyperText Markup Language, Lenguaje de Marcado de HyperTexto
+    <br>Utilizaremos etiquetas para insertar información de cualquier tipo y que además, nos permitirá insertar
+    <br>lo que se conoce como hiperenlaces o hipertexto.
+    <br>HTML, NO ES UN LENGUAJE DE PROGRAMACIÓN. ES UN LENGUAJE DE MARCAS
+    <br>Estas etiquetas vienen predefinidas por W3Consortium (World Wide Web)
+    <br>Permite aglutinar cualquier tipo de información que se desee.
+    <hr>
+    <h2>Funcionamiento y visualización de un web</h2>
+    <img src="img/introweb.jpg" alt="" width="500px" height="250px" >
+    <hr>
+    <h2>Etiquetas o Tag en HTML</h2>
+    <ul>
+        <li>Las marcas o tags en HTML, se van a escribir entre desigualdades (es decir, simbolo "<", y el símbolo ">")</li>
+        <li>Van a tener una etiqueta de apertura, y otra de cierre. Es decir, una de inicio y otro de fin</li>
+        <li>La etiqueta de inicio contendrá el nombre de la etiqueta, y el cierre,tendrá el nombre y delante del mismo /</li>
+    </ul>
+    <br><img src="img/etiquetas.jpg" alt="" width="500px" height="250px">
+    <br>Aunque todas las etiquetas por lo general tienen una de inicio y otra de fin, existen en html lo que se conocen
+    <br>como monoetiquetas.Qué sólo tiene una etiqueta de apertura/inicio. 
+    <br>Eje: img, hr, br, etc.
+    <hr>
+    <h2>Atributos en HTML</h2>
+    En HTML, tenemos lo que se conoce como atributos.Sirven para dar información o cualidades adicionales a nuestras etiquetas.
+    <br>Todas las etiquetas pueden tener uno o varios atributos, y siempre se colocarán en la etiqueta de inicio.
+    <br> "<"etiqueta atributo= valordeatributo atributo=valor de atributo ">" 
+    <hr>
+    <h2>Comentarios en HTML</h2>
+    Un comentario, sirve para dar información al programador o desarrollador de la web.
+    <br>Dicha información, NUNCA se va a mostrar cuando ejecutemos la página web.
+    <br>Para poder poner un comentario, lo haremos de la siguiente manera:
+    <br>Se pone "<""!" seguido de "--" a continuación el texto a indicar y se cierra con "--"">"
+    <!-- Esto es un ejemplo de comentario en HTML -->
+    <hr>
+    <h2>Estructura de una Página Web en HTML</h2>
+    Los documentos en HTML, están divididos en dos partes:
+    <ul>
+        <li>Cabecera: donde se almacena información tal como el título de la pestaña del navegador, 
+            <br>el idioma, links a librerías de JS(JavaScript), links a hojas de estilos externos (CSS),
+            <br>favicom, metadatos (UTF-8). Este contenido no se muestra en la web.
+        </li>
+        <li>Cuerpo: incluye TODOS los elementos de nuestra página web: párrafos, texto, imágenes, 
+            <br>vídeos, audios, formularios, etc.
+        </li>
+        <br> <img src="img/estructura.jpg" alt="" width="600px" height="300px">
+    </ul>
+    <hr>
+    <h1>Niveles de títulos en HTML</h1>
+    En HTML, podemos establecer hasta un total de 6 niveles para poder insertar títulos en nuestro documento.
+    <br>En este caso, el nivel de mayor tamaño es el h1, y el de menor tamaño es el h6.
+    <br>Ejemplo de niveles:
+    <h1>Este es un título de nivel h1</h1>
+    <h2>Este es un título de nivel h2</h2>
+    <h3>Este es un título de nivel h3</h3>
+    <h4>Este es un título de nivel h4</h4>
+    <h5>Este es un título de nivel h5</h5>
+    <h6>Este es un título de nivel h6</h6>
+<hr>
+<h1>Salto de línea y salto de párrafo, y línea de separación (hr)</h1>
+Un salto de línea y un salto de párrafo son elementos que utilizaremos en nuestras webs para poder
+<br>dar formato y orden a nuestro texto.
+<br>Para establecer un salto de párrafo utilizaremos la etiqueta p con etiqueta de apertura y cierre.
+<br>Para establer un salto de línea utilizaremos la etiqueta br que es una monoetiqueta (no tiene etiqueta de cierre)
+<br>Esto es un salto de línea
+<p>Esto es un salto de párrafo</p>
+<br>
+<br>Además podemos utilizar un elemento que se llama hr para poder establecer separaciones entre secciones.
+<br>Un hr, es por lo tanto una línea horizontal que permite tener delimitados las secciones y elementos
+<br> de mi página web.
+<br>Esta es una sección de una página web
+<hr color="blue" size="10px" width="25%">
+Esta es otra sección de una página web
+<hr>
+<h1>Etiqueta para preformatear texto e insertar código</h1>
+En html, existe una etiqueta que se llama pre, con etiqueta de apertura y cierre, que sirve
+<br> para preformatear texto.
+<br>Ejemplo de texto preformateado
+<pre>
+    Hola                esto                es              un texto
+            preformateado
+                        lo hemos 
+
+            hecho en la clase de Lenguaje
+                                                de marcas       de      DAW
+</pre>
+<br>Ejemplo de etiqueta code aplicado en un pre
+<pre>La función es:
+    <code>
+        function diHola() {
+            console.log ('Hola alumnos de 1ºDAW');
+            alert ("Si estudiáis, vais a sacar el curso...");
+        }
+    </code>
+</pre>
+<hr>
+<h1>Formato de Texto en HTML</h1>
+<ul>
+    <li>Etiqueta b: sirve para poner el texto en <b>negrita</b></li>
+    <li>Etiqueta i: sirve para poner el texto en <i>cursiva</i></li>
+    <li>Etiqueta del: sirve para poner el texto <del>tachado</del></li>
+    <li>Etiqueta em: sirve para poner el texto en <em>énfasis</em></li>
+    <li>Etiqueta small: sirve para poner el texto en <small>pequeño</small></li>
+    <li>Etiqueta sup (superíndice): sirve para poner un texto de esta manera:X<sup>DAW</sup></li>
+    <li>Etiqueta sub (subíndice): sirve para poner un texto de esta manera:X<sub>DAW</sub></li>
+    <li>Etiqueta mark: sirve para <mark>resaltar</mark> un texto</li>
+    <li>Etiqueta q: Añadir citas pequeñas: <q>Esto es una cita</q></li>
+    <li>Etiqueta cite: Para indicar el título de un trabajo. Ejemplo: <cite>1ºDAW</cite></li>
+    <li>Etiqueta time: para poner formato hora. <time>22:00:23</time></li>
+    <li>Etiqueta address: se utiliza para indicar direcciones: Ejemplo: <address>Calle Tajo s/n</address></li>
+    <li>Etiqueta blockquote: Sirve para alinear grupos de listas de elementos.</li>
+</ul>
+<hr>
+<h1>Etiquetas que ya no se usan en HTML5 y que sirven para dar formato al texto</h1>
+Hace tiempo, se utilizan unas etiquetas con una serie de atributos específicos para dar 
+<br>formato y apariencia al texto en HTML.
+<br>Con la llegada de las nuevas normas y características de HTML5, esto se dejó de usar, 
+<br>puesto que se aplicaba directamente a lo que hoy en día se conoce como CSS3.
+<br>Las etiquetas que usábamos entonces, eran la etiqueta de apertura y cierre font.
+<br>Y los atributos que iban asociados a la etiqueta font, eran los siguientes:
+<ul>
+    <li><b>face</b>: se utilizaba para cambiar la tipografía (tipo) de letra.
+    <br>Ejemplo: TimeNewRoman, Arial, Calibri, etc.</li>
+    <li><b>size</b>: se utilizaba para cambiar el tamaño de la letra en px (pixel)</li>
+    <li><b>color</b>: para aplicar color en distintos formatos al texto.</li>
+    <br>Además esto, podemos alinear el texto: a la izquierda, a la derecha, centrado y justificado.
+    <br>Ejemplo de aplicación de apariencia en HTML
+</ul>
+<h1><font color="aquamarine" face="Verdana" size="150px">Hola</font></h1>
+    <p><font size="24px" color="purple" face="Arial">kjdslkajflkajslkdfjalksdjflkadsj</font></p>
+    <br>
+    <h3 align="right">Esto es un texto alineado a la derecha</h3>
+    <h3 align="center">Esto es un texto alineado al centro</h3>
+    <h3 align="left">Esto es un texto alineado a la izquierda</h3>
+</body>
+</html>
