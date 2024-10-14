@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes y Multimedia</title>
+</head>
+<body>
+    <h1>Imágenes en HTML</h1>
+    En informática, podemos distinguir dos tipos de imagenes:
+    <ul>
+        <li><b>Imágenes de mapa de bits</b>:Están formados por puntos de colores.</li>
+        <li><b>Imagénes vectoriales</b>: Están formadas por figuras geométricas</li>
+    </ul>
+    <br>Las ventajas que presentan unas con respecto a otras son las siguientes:
+    <ul>
+        <li>Ventaja de Img. Vectoriales: ocupan poco espacio y se pueden ampliar
+            <br> a cualquier escala sin que se pierda calidad de imagen.
+        </li>
+        <li>Inconveniente de Img.Vectoriales: no permiten representar Imágenes
+            <br> sin formas definidas, como ocurren en las fotografías.
+        </li>
+        <li>Ventajas de Img. Mapa de Bits: permiten representar imágnes sin formas 
+            <br>definidas.
+        </li>
+        <li>Inconveniente de Img. de Mapa de Bits: pierden mucha calidad al ampliarlas
+            <br> y ocupan mucho espacio en el disco duro.
+        </li>
+    </ul>
+    <img src="img/tipoImagenes.jpg" width="500px" height="250px">
+</body>
+<h2>Insertar Imagen en HTML</h2>
+Para insertar una imagen en un documento HTML, debemos utilizar la monoetiqueta 
+<b>img</b> seguido del atributo <b>src (source)</b>
+<br><img src="img/bob.jpg" alt="Foto de Bob con una hamburguesa gigante" width="60%" height="400px" title="Esto es un ejemplo de foto de bob esponja">
+<br>Los atributos que podemos utilizar para la etiqueta img son los siguientes:
+<ul>
+    <li>src= sirve para poder vincular la imagen con la etiqueta img.
+        <br>IMPORTANTE: recordar, que la carpeta img o los archivos de Imágenes
+        <br>que querais vincular, deben estar en la misma carpeta de trabajo.
+    </li>
+    <li>alt= alternativo. Es un texto breve que muestra una descripción de la imagen
+        <br>cuando esta se "corrompe" o "está mal insertada".
+    </li>
+    <li>height y width: para dar un valor de anchura y altura a las fotos.
+        <br>Esto se hará en CSS, con estos mismos atributos, pero no quita, que
+        <br>como caso ocasional, se pueda aplicar en HTML.
+        <br>Se pueden aplicar valores en PX (Pixel) o % (cogiendo el tanto % del 
+        <br> tamaño que se tenga como original o de base de la imagen)
+    </li>
+    <li>usemap: sirve para hacer mapeados de imágenes.</li>
+    <li>title= contiene texto a modo de tipo de información, que se muestra
+        <br>cuando se pasa el ratón por encima de la foto.
+    </li>
+</ul>
+<hr>
+<h2>Etiqueta picture</h2>
+    La etiqueta picture, se utiliza sobre todo en páginas web responsive, puesto que 
+    <br> es un tipo de etiqueta que permite una mayor flexibilidad a la hora de utilizar
+    <br>imágenes.
+    <br>La etiqueta picture contine una o más etiquetas source, y una etiqueta img.
+    <br>A su vez, va asociado a los siguientes atributos:
+    <ul>
+        <li>srcset: define la url de la imagen para mostrar.</li>
+        <li>media: acepta cualquier consulta de medios válida para definir un CSS Responsive.</li>
+        <li>width y height</li>
+        <li> type: define el tmipo de formato de imagen.</li>
+    </ul>
+    <h2>Etiqueta figure</h2>
+    La etiqueta figure se utiliza en HTML5 para mostrar un texto asociado a una imagen.
+    <br>Su estructura está formada por:
+    <ul>
+        <li>etiqueta de apertura y cierre figure. Considerada como etiqueta padre</li>
+        <li>etiqueta img</li>
+        <li>etiqueta figcaption: sirve para establecer un título a una imagen.</li>
+    </ul>
+    <br>
+    <figure>
+        <img src="img/logo_html_css.png" width="250px" height="50%">
+        <figcaption><font color="green"><b>Logotipo de HTML5 y CSS3</b></font></figcaption>
+    </figure>
+    <h2>Mapeado de Imagenes en HTML</h2>
+    En HTML, a través de la etiqueta map, podemos mapear una imagen, con el fin 
+    <br> de que podamos vincular varias partes o zonas de la misma a varias webs o
+    <br> hiperenlaces distintos.
+    <ul>
+        <li>map: define la zona de mapeado que queremos realizar.</li>
+        <li>area: que sirve para establecer la zona de mapeado que queremos aplicar</li>
+        <li>shape: definir la zona y tipo de mapeado que queramos llevar a cabo
+            <ul>
+                <li>default: mapeado por defecto.</li>
+                <li>rect: mapeado en forma rectangular.
+                    <br>Cogeremos como puntos de referencia vertice superior izquierdo de la 
+                    <br>imagen (X1,Y1), y la parte inferior derecha de la imagen (X2, Y2)
+                </li>
+                <li>circle: mapeado de un área circular.
+                    <br>Coger un punto X,Y que corresponderá al punto central de nuestra
+                    <br>circunferencia, y un tamaño de radio (en px)
+                </li>
+                <li>poly: mapeado de una zona con 3 o más puntos que definen un polígono.
+                    <br>Cogeremos tres puntos o más (X1,Y1, X2,Y2, X3, Y3...) y estableceremos
+                    <br> una zona de mapeado.
+                </li>
+            </ul>
+        </li>
+        <li>coords: coordenadas de la zona de mapeo.</li>
+    </ul>
+    <br>Ejemplo de Mapeado de imagen (en ejemplomapeado.html)
+
+</html>

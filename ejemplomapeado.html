@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Mapeado HTML</title>
+</head>
+<body>
+    <img src="img/capitanironman2.png" usemap="#marvel"> 
+    <map name="marvel">
+        <!-- Mapeado por defecto con default. Actua como si a la img le introdujéramos
+        un hipervínculo de manera normal. -->
+        <!-- <area shape="default" coords="" href="https://universidadeuropea.com/" alt=""> -->
+        <!-- Mapeado de rectagulos. Cojo la coordenada de la Esquina superior izquierda y la esquina inferior derecha -->
+        <area shape="rect" coords="0,0,405,597" href="https://as.com/" alt="" target="_blank">
+        <!-- Mapeado de circunferencia: cojo un punto central X,Y, y un valor de radio -->
+        <area shape="circle" coords="531,142,43" href="https://www.marvel.com/" alt="" target="_blank">
+        <!-- Mapeado de polígono: cogemos tres puntos como mínimo, siguiendo el sentido de las 
+            agujas del reloj, y obtenemos el valor de nuestro área.-->
+        <area shape="poly" coords="525,244,547,233,544,259,530,265" href="https://www.20minutos.es/" alt="" target="_blank">
+    </map> 
+</body>
+</html>
