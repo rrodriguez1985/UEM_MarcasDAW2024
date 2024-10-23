@@ -106,5 +106,53 @@ Para insertar una imagen en un documento HTML, debemos utilizar la monoetiqueta
         <li>coords: coordenadas de la zona de mapeo.</li>
     </ul>
     <br>Ejemplo de Mapeado de imagen (en ejemplomapeado.html)
-
+    <hr>
+    <h2>Insertar vídeos y audios en HTML5</h2>
+    En HTML5, podemos insertar tanto audios como vídeos, de tres formas distintas:
+    <ul>
+        <li>Podemos insertar un vídeo de un servidor externo o web externa,
+            <br> mediante la etiqueta iframe.
+            <br>IMPORTANTE: El vídeo depende y es gestionado por la web en la que está
+            <br>alojada, es decir, si el servidor "quita" el acceso al vídeo, el vídeo no
+            <br>podría ser reproducido.
+        </li>
+        <li>Podemos insertar un vídeo en nuestra página web, mediante la etiqueta
+            <br>video.
+        </li>
+        <li>Podemos insertar un archivo de audio en nuestra página web, mediante
+            <br>la etiqueta audio.
+        </li>
+    </ul>
+    <br>Ejemplo de insercción de vídeo mediante la etiqueta iframe.
+    <br>
+    <div align="center">
+        <iframe width="650px" height="500" src="https://www.youtube.com/embed/jSJ8xhKtfP4?list=PLTd5ehIj0goMCnj6V5NdzSIHBgrIXckGU" title="Tutorial de Git – 1. Qué es Git" frameborder="4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <br>Vídeo insertado desde nuestro propio servidor
+    <div align="center">
+        <br><video src="multimedia/ballerina-tráiler-español-2025-john-wick.mp4" width="1000px" controls poster="img/bob.jpg"></video>
+    </div>
+    <br>
+    <audio src="multimedia/best-of-you-official-music-video.mp3" controls></audio>
+<hr>
+<h3>Propiedades vinculados con Audios y vídeos</h3>
+Entre las propiedades que podemos usar con la etiqueta audio y la de vídeo, destacamos las siguientes:
+<ul>
+    <li><b>src</b>: definir la URL o Ubicación de nuestros archivos</li>
+    <li><b>preload</b>: es usado en audio y vídeo, para almacenar archivos de gran tamaño
+    <br> temporalmente (buffering). Entre sus valores, podemos tener:
+        <ul>
+            <li>none: no almacena datos temporales</li>
+            <li>auto: almacenar temporalmente el archivo multimedia</li>
+            <li>metadata: almacena temporalmente sólo los metadatos del archivo</li>
+        </ul>
+    </li>
+    <li><b>mediagroup</b>: agrupaciones multimedia</li>
+    <li><b>autoplay</b>: inicializar el archivo multimedia al comienzo de la carga de la web</li>
+    <li><b>loop</b>: para una reproducción en bucle</li>
+    <li><b>muted</b>: silenciar el archivo</li>
+    <li><b>controls</b>: controles del reproductor</li>
+    <li><b>width y height</b>: sólo se aplica en vídeos</li>
+    <li><b>poster</b>poner una imagen en el vídeo, antes de comenzar.</li>
+</ul>
 </html>
