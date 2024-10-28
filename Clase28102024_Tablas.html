@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas en HTML</title>
+</head>
+<body>
+    <h1>Tablas en HTML</h1>
+    Las tablas en HTML, eran hasta hace unos años, un elemento fundamental para la maquetación
+    <br> de nuestras páginas web.
+    <br> Una tabla es un conjunto de celdas donde podemos alojar distintos contenidos.
+    <br>La estructura de una tabla en HTML, está formada por los siguientes elementos:
+    <ul>
+        <li>
+            <b>table</b>: Tiene etiqueta de apertura y cierre, y sirve para definir
+            <br>que vamos a utilizar una tabla en HTML
+        </li>
+        <li>
+            <b>tr</b>: Tiene etiqueta de apertura y cierre, y se utiliza para definir
+            <br> las filas de nuestra tabla.
+        </li>
+        <li>
+            <b>td</b>: Tiene etiqueta de apertura y cierre, y se utiliza para definr el número
+            <br> de celdas que va a tener nuestras filas.
+        </li>
+        <li>
+            Las celdas, pueden contener texto, imágenes, formularios, vídeos, audios, otras tablas...
+        </li>
+    </ul>
+    <br>Ejemplo de una tabla:
+    <table border="1px">
+        <tr>
+            <td>Nombre</td>
+            <td>Apellido</td>
+        </tr>
+        <tr>
+            <td>Raul</td>
+            <td>Rodriguez</td>
+        </tr>
+    </table>
+    <h2>Propiedades de Tablas en HTML</h2>
+    <ul>
+        <li><b>table</b>:como inicio y fin de una tabla</li>
+        <li><b>caption</b>: tiene etiqueta de apertura y cierra, sirve para poder
+        <br> poner un título a la tabla</li>
+        <li><b>align="top" o align="bottom"</b>: sirve para alinear arriva o abajo
+        <br> el título de la tabla</li>
+        <li><b>thead o th</b>: Definir la cabecera de una tabla</li>
+        <li><b>tbody</b>: sirve para definir el contenido de la tabla </li>
+        <li><b>tfoot</b>: sirve para definir el pie de la tabla</li>
+        <li><b>tr</b>: sirve para definir la fila de una tabla</li>
+        <li><b>td</b>: sirve para definir la celda (columna) de la tabla</li>
+    </ul>
+    <br>Ejemplo de tabla con caption, thead, tbody y tfoot:
+    <br>
+    <table border="1px">
+        <caption align="bottom">Lista de Goleadores de la Liga</caption>
+        <th>Jugador</th>
+            <th>Equipo</th>
+            <th>Goles</th>
+        
+        <tbody>
+            <td>Lewandoski</td>
+            <td>Barca</td>
+            <td>13</td>
+        </tbody>
+        <tbody>
+            <td>Griezman</td>
+            <td>Atletico</td>
+            <td>10</td>
+        </tbody>
+        <tr>
+            <td>Mbappe</td>
+            <td>Real Madrid</td>
+            <td>7</td>
+        </tr>
+        <tfoot>
+            <td>Yamal</td>
+            <td>Barca</td>
+            <td>7</td>
+        </tfoot>
+    </table>
+    <hr>
+    <h2>Combinación de tablas en HTML</h2>
+    Para poder realizar la combinación de celdas de tablas, podemos utilizar los siguientes
+    <br>atributos:
+    <ul>
+        <li><b>colspan</b>: indicar el número de filas que ocupa la celda (combinación de celdas)</li>
+        <li><b>rowspan</b>: indicar el número de columnas que ocupa la celda (combinación de columnas)</li>
+    </ul>   
+    <br>Ejemplo de combinación de celdas en tablas:
+    <table border="2px" align="center">
+        <tr align="center">
+            <!-- primera fila de la tabla -->
+            <td>A</td>
+            <td>B</td>
+            <td rowspan="3" bgcolor="pink"><font color="orange">C</font></td>
+            <td>D</td>
+        </tr>
+        <tr align="center">
+            <!-- segunda fila de la tabla -->
+            <td rowspan="2">E</td>
+            <td>F</td>
+            <!-- <td>B</td> -->
+            <td rowspan="3">G</td>
+        </tr>
+        <tr align="center">
+            <td>H</td>
+        </tr>
+        <tr align="center">
+            <td colspan="2">I</td>
+            <td>J</td>
+        </tr>
+    </table>
+    <br>
+    <h3>Propiedades a tener en cuenta en tablas</h3>
+    Anteriormente, hemos visto algunas propiedades que forman parte de la estructura
+    <br> de las tablas.
+    <br>Ahora, veremos algunas propiedades que podemos usar y que debemos tener en cuenta
+    <br> a la hora de tratar con tablas.
+    <ul>
+        <li><b>border</b>: establece es el ancho del borde exterior de la tabla en px</li>
+        <li><b>cellspacing</b>: especifica es el espacio entre las celdas</li>
+        <li><b>cellpadding</b>: especifica el espacio entre el borde deuna celda y su contenido</li>
+        <li><b>width y height</b>: podemos establecer un valor de anchura y altura a la tabla.
+        <br>Estos valores pueden ser en % y/o en px</li>
+    </ul>
+    <br>Ejemplo de cellpadding y cellspacing en Tablas
+    <br>
+    <table border="2px" align="center" cellpadding="10px" cellspacing="15px" width="50%">
+        <tr align="center">
+            <td>Sistema Operativo</td>
+            <td>Distribución</td>
+        </tr>
+        <tr align="center">
+            <td>Windows</td>
+            <td>11</td>
+        </tr>
+        <tr align="center">
+            <td>Linux</td>
+            <td>Mint</td>
+        </tr>
+    </table>
+    <br>
+    <br>Ejemplo de tabla con imágenes insertadas
+    <br>
+    <table border="1px" bordercolor="red" width="400px" height="200px">
+        <tr>
+            <td bgcolor="green" align="center" width="200px" height="100px"><font color="white" face="Arial" size="10px"><a href="https://es.wikipedia.org/wiki/Rick_y_Morty" target="_blank">Rick and Morty</a></font></td>
+            <td><img src="img/rick2.jpg" alt="" width="100%" height="100%"></td>
+        </tr>
+        <tr>
+            <td bgcolor="purple" align="center" width="200px" height="100px"><font color="white" face="Arial" size="14px">Futurama</font></td>
+            <td><a href="https://es.wikipedia.org/wiki/Futurama" target="_blank"><img src="img/futurama.jpg" alt="" width="200px" height="100px"></a></td>
+        </tr>
+    </table>
+</body>
+</html>
