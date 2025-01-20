@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /*A continuación, asignaremos propiedades a un id y veremos su resultado*/
+        div{
+            border:2px solid black
+        }
+        #unico{
+            background-color: skyblue;
+            font-size:20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .daw{
+            background-color: brown;
+            color:darkorange;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size:16px;
+        }
+
+    </style>
+    <title>ID y CLASS en CSS</title>
+</head>
+<body>
+    <h1>Definición de ID en HTML y CSS</h1>
+    El valor del atributo "id" tanto en HTML como en CSS, hace referencia a un elemento que será único.
+    <br>En HTML, cuando hago referencia a un id, utilizaremos el identificador y estructura 
+    <br>id = "nombre_identificador"
+    <br>En CSS, para hacer referencia al ID que estamos atribuyendo ciertas propiedades y/o características,
+    <br>lo haremos a través de la siguiente estructura: #nombre_idenficador
+    <br>Así, podríamos decir que un elemento ID, será un elemento único.
+    <br>Es decir, no deberá haber otro elemento con el mismo nombre de identificador (id) dentro de nuestra 
+    <br>página web / documento HTML.
+    <hr>
+    <h2>Ejemplo de elemento ID en HTML y CSS</h2>
+    <div>Este es  un div sin idenfiticador (id) en CSS</div>
+    <br>
+    <div id="unico">Este es un div con identificador (id) en CSS</div>
+    <br>Recordar, que una propiedad id, SOLO SE DEBE APLICAR A UN MISMO TIPO DE ELEMENTO O ETIQUETA
+    <br>
+    <h1>Definición de CLASS en HTML y CSS</h1>
+    El valor del atributo "class" tanto en HTML como en CSS, hace referencia a varios elementos, independientemente
+    <br>del tipo de etiqueta que sea, con el fin de poder aplicar unas mismas propiedades a estas.
+    <br>Es decir, el valor de class puede ser utilizado en más de un elemento de un mismo documento HTML.
+    <br>Esto lo que provoca es que podamos aplicar a distintas etiquetas un mismo estilo, ahorrando líneas de código
+    <br> y sobre todo, poder aplicar una misma concordancia de estilos y estructura a nuestra web.
+    <br>En HTML, cuando hago referencia a una clase, utilizaremos el identificador y estructura 
+    <br>class = "nombre_identificador"
+    <br>En CSS, para hacer referencia al CLASS que estamos atribuyendo ciertas propiedades y/o características,
+    <br>lo haremos a través de la siguiente estructura: .nombre_idenficador
+    <h2>Ejemplo de elemento ID en HTML y CSS</h2>
+    <div class="daw">Este es un div con clase (class) en CSS</div>
+    <p class="daw">Esto es un salto de párrafo con una clase (class) en CSS</p>
+    <ul class="daw">
+        <li>Lista desordenada con una clase (class) en CSS</li>
+        <li>Lista desordenada con una clase (class) en CSS</li>
+        <li>Lista desordenada con una clase (class) en CSS</li>
+    </ul>
+</body>
+</html>

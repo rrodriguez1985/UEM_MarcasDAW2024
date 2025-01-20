@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p{
+            /*Aplicar color mediante CSS al texto*/
+            color:indigo;
+            /*Aplicar color de fondo mediante CSS*/
+            background-color: cadetblue;
+        }
+        #parrafo{
+            background-color: rgba(165, 42, 42, 0.461);
+            color:white;
+            text-align: center;
+            font-size:20px;
+        }
+    </style>
+    <title>Propiedades en CSS</title>
+</head>
+<body>
+    <h1>Propiedades en CSS</h1>
+    Cuando hablamos de propiedades en CSS, nos estamos refiriendo a las características
+    <br> que podemos utilizar / aplicar a nuestras etiquetas HTML de manera generalizada.
+    <h2>Colores en CSS</h2>
+    Las propiedades que podemos utilizar en CSS para aplicar colores son las siguientes:
+    <ul>
+        <li>Aplicar mediante el atributo <b>color</b> el color de texto de un elemento.</li>
+        <li>Aplicar el atributo <b>background-color</b> para aplicar el color de fondo de un elemento.</li>
+    </ul>
+    <p>
+        Ejemplo de cómo aplicar un color de texto y fondo a un elemento en HTML y CSS
+    </p>
+    <p id="parrafo">
+        Esto es otro salto de párrafo
+    </p>
+    <p>
+        Este es otro salto de párrafo totalmente distinto
+    </p>
+    <br>Al igual que le podemos aplicar propiedades, podemos aplicarle distintas formas de 
+    <br>aplicar color en CSS a los elementos:
+    <ul>
+        <li><b>Palabra clae</b>: red, blue, grey, violet...</li>
+        <li><b>Esquema RGB (Red, Green, Blue)</b>: rgb(234,222,123)</li>
+        <li><b>Esquema RGB con canal alfa</b>: rgba(234,123,23,0.3) El valor
+        <br>de la capa alfa, va entre valores que oscilan de 0 como la más transparente
+        <br> y 1 como la más oscura.</li>
+        <li><b>RGB Hexadecimal</b>: #ff4499</li>
+        <li><b>RGB Hexadecimal Abreviado</b>: #f49</li>
+    </ul>
+    <h2>Unidades de medida en CSS</h2>
+    En CSS, podemos diferenciar entre dos tipos de medidas a utilizar:
+    <ul>
+        <li><b>Unidades Absolutas</b></li>
+        <li><b>Unidades Relativas</b></li>
+    </ul>
+    <h3>Unidades Absolutas</h3>
+    Las unidades absolutas, son aquellas que tienen un valor o tipo de medida fijo.
+    <br>NO CAMBIAN NUNCA.
+    <br>Son ideales para medios no variables, y por lo tanto son poco flexibles y no
+    <br> son útiles de usar para la adaptación de diferentes resoluciones o pantallas.
+    <ul>
+        <li>Pulgadas (in)</li>
+        <li>cm</li>
+        <li>pc (Picas)</li>
+        <li>mm</li>
+        <li>pt (Puntos)</li>
+    </ul>
+    <h3>Unidades Relativas</h3>
+    Las unidades relativas, son un tipo de unidades de medida estandarizada en CSS,
+    <br>qué dependen de otra resolución (densidad de pantalla).
+    <br>Tienen un curva de aprendizaje más compleja, pero son ideales para trabajar
+    <br>en dispositivos con distintas resoluciones y tamaños al ser muy flexibles.
+    <ul>
+        <li>em (1em = tamaño fuente (12-14px))</li>
+        <li>ex (aprox. 0,5 em)</li>
+        <li>rem (similar al em)</li>
+        <li>ch (zero width (1ch = ancho del cero))</li>
+        <li>px (pixel)</li>
+        <li>%</li>
+    </ul>
+    <br> A parte de estas medidas, podemos utilizar las típicas como son las de width y height para dar
+    <br> tamaño de anchura y altura de nuestras fuentes y elementos.
+</body>
+</html>
