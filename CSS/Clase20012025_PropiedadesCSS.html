@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body{
+            background-image: url(../img/fondo.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            color:white;
+        }
         p{
             /*Aplicar color mediante CSS al texto*/
             color:indigo;
@@ -15,6 +23,121 @@
             color:white;
             text-align: center;
             font-size:20px;
+        }
+        .caja{
+            border:1px solid blue;
+            /* width: 500px; */
+            height: 100px;
+            color: red;
+            margin:20px;
+            padding:45px;
+        }
+        #visible{
+            height: 300px;
+            width: 300px;
+            color:red;
+            border:2px solid blue;
+            /*overflow: sirve para indicar al navegador lo que tiene
+            que hacer con el contenido que no cabe dentro de una
+            caja/div y que es considerado como contenido sobrante.*/
+            overflow:visible;
+            /*overflow:visible --> lo que hace es que el texto sobrante
+            sobresalga de la caja, es decir, se desbordará de la caja al
+            no coger en ella*/
+        }
+        #hidden{
+            height: 250px;
+            width: 300px;
+            color:red;
+            padding:10px;
+            text-align: justify;
+            border:2px solid blue;
+            /*overflow: sirve para indicar al navegador lo que tiene
+            que hacer con el contenido que no cabe dentro de una
+            caja/div y que es considerado como contenido sobrante.*/
+            overflow:hidden;
+            /*overflow:hidden --> lo que hace es que el texto sobrante de la caja
+            se oculte/esconda con respecto a su caja principal.De esta manera, damos la 
+            sensación de que no se desborda de la caja.*/
+        }
+        #scroll{
+            height: 250px;
+            width: 200px;
+            color:red;
+            padding:10px;
+            text-align: justify;
+            border:2px solid blue;
+            /*overflow: sirve para indicar al navegador lo que tiene
+            que hacer con el contenido que no cabe dentro de una
+            caja/div y que es considerado como contenido sobrante.*/
+            overflow:scroll;
+            /*overflow:scroll --> lo que hace es que en la caja contendora de texto,
+            aparezca una barra de desplazamiento (principalmente vertical, aunque
+            también podría ser horizontal), con el fin de mostrar el contenido que
+            tiene.*/
+        }
+        #auto{
+            height: 250px;
+            width: 50px;
+            color:red;
+            padding:10px;
+            text-align: justify;
+            border:2px solid blue;
+            /*overflow: sirve para indicar al navegador lo que tiene
+            que hacer con el contenido que no cabe dentro de una
+            caja/div y que es considerado como contenido sobrante.*/
+            overflow:auto;
+            /*overflow:auto --> lo que hace es que en la caja contendora de texto,
+            aparezca una barra de desplazamiento vertical y/u horizontal, de tal manera
+            que nos permita visualizar el contenido.
+            En este caso, a diferencia del overflow:scrool, aparece de manera automática
+            y según las necesidades del elemento contendor.*/
+        }
+        .borde{
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin:auto;
+            /* border: 10px pink outset; */
+            border-width: 10px;
+            border-color:pink red blue yellow;
+            border-style:outset;
+            /*border-radius permite redondear las esquinas de los elementos
+            podemos usar px o %*/
+            border-radius: 50%;
+        }
+        table, tr,td{
+            border:2px solid black;
+            border-spacing: 0px;
+            
+            
+        }
+        table{
+            width: 200px;
+            height: 200px;
+            margin:auto;
+            border-radius: 50%;
+        }
+        td{
+            width: 50px;
+            height: 50px;
+
+        }
+        .verde{
+            background-color: green;
+            border-top-left-radius: 100%;
+        }
+        .amarillo{
+            background-color: yellow;
+            border-bottom-right-radius: 100%;
+        }
+        .azul{
+            background-color: blue;
+            border-bottom-left-radius: 100%;
+        }
+        .rojo{
+            background-color: red;
+            border-top-right-radius: 100%;
         }
     </style>
     <title>Propiedades en CSS</title>
@@ -82,5 +205,147 @@
     </ul>
     <br> A parte de estas medidas, podemos utilizar las típicas como son las de width y height para dar
     <br> tamaño de anchura y altura de nuestras fuentes y elementos.
+    <hr>
+    <h2>Modelos de Cajas en CSS</h2>
+    Todos los elementos HTML, cuando creamos páginas web, están dentro de lo que se conoce como contenedores / cajas de contenido.
+    <br>Las cajas que vamos a utilizar, son principalmente div (cajas), o etiquetas semánticas
+    <br>como pueden ser: header, nav, article, footer, etc.
+    <br> Hasta ahora, utilizábamos tablas para maquetar, pero cuando utilizamos estas, teníamos la problemática
+    <br> de que eran poco flexibles a la hora de poderlas ajustar a distintas resoluciones, y resultaban
+    <br> muy complejas de manejar...
+    <br>En la actualidad, cuando queremos maquetar vamos a dejar de usar tablas, y utilizaremos las cajas/divs que hemos comentado
+    <br> junto a una serie de propiedades que comentaremos a continuación:
+    <ul>
+        <li><b>margin</b>: corresponde al margen existente entre el borde exterior de nuestra caja/elemento
+        <br>contenedor, y nuestro navegador.</li>
+        <li><b>padding</b>: corresponde al margen interior de nuestra caja, es decir, al espacio existente
+        <br> entre el contenido y el borde de nuestro elemento contenedor.</li>
+        <li><b>contenido</b>: son las etiquetas que van ir dentro de nuestra caja o elelento contenedor.</li>
+    </ul>
+    <img src="../img/ModelosCajasCSS.png" alt="" width="500px">
+    <br>
+    <h4>Ejemplo de Div con Margin y Padding</h4>
+    <div class="caja">Esto es un div al que le hemos aplicado margin y padding</div>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis explicabo officia enim non ipsa libero quisquam fugit repellat suscipit magnam eos distinctio, quam placeat iusto deserunt tempora qui, aspernatur quod!
+    Nulla harum sint repellendus dolorem atque, possimus quaerat voluptatum architecto ut, dignissimos vel! Modi velit nam, illum animi maxime cumque commodi quia repudiandae, minus ipsa provident omnis, rem laudantium quam!
+    Ipsum, sint porro laborum suscipit dicta dolore velit. Quod consequuntur rerum officiis ut, est molestias, at omnis voluptatum magnam ipsam optio vero laborum ducimus quae hic, praesentium quia illum numquam.
+    Expedita assumenda excepturi rerum. Hic, aperiam labore. Expedita obcaecati facere earum quisquam, harum, id molestias dolor hic aliquid praesentium recusandae quos non? Similique quod unde consectetur corporis possimus eligendi illo.
+    Est quos modi eveniet esse, vitae et porro numquam ab quam a aut nam quasi tempora! Dolorum iusto quam ad excepturi tempora, itaque velit incidunt delectus commodi impedit repellat voluptatibus?
+<h2>Modelo de Cajas en CSS: Ejemplos Overflow</h2>
+En CSS, utilizamos la propiedad <b>overflow</b> para indicar al navegador lo que debe de hacer con el contenido que no cabe dentro
+<br> de nua capa div y que es considerado como contenido sobrante.
+<h3>Ejemplo Overflow Visible</h3>
+<div id="visible">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, consequatur laborum? Molestiae, eaque accusantium ea magnam, itaque iste quis deleniti voluptatibus repellendus provident ipsa voluptatem nobis beatae harum, debitis culpa!
+    Vitae sit error adipisci unde deserunt. Reprehenderit, cumque pariatur optio totam quibusdam quidem? Incidunt distinctio placeat reiciendis veritatis laboriosam est aspernatur accusantium neque! Minima, quaerat reiciendis vel labore quo aliquid.
+    Laudantium totam omnis, accusamus atque explicabo suscipit ipsum labore dicta quis nihil error voluptatum, sint unde quasi hic perferendis necessitatibus eveniet soluta ullam, fuga modi esse libero? Cupiditate, omnis optio.
+    Unde molestiae dignissimos, culpa maiores quibusdam mollitia sunt cupiditate officia fugiat quas ullam! Reprehenderit ullam saepe ipsa unde aut pariatur eaque magnam laboriosam quae repellat. Deleniti quod temporibus doloribus doloremque!
+    Provident, sed quas numquam quidem eligendi nulla magni id animi quos reprehenderit non cumque temporibus accusamus voluptate assumenda mollitia ad autem obcaecati laborum vero minus. Quo assumenda voluptas corrupti ipsam.
+</div>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<h3>Ejemplo Overflow Hidden</h3>
+<div id="hidden">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, consequatur laborum? Molestiae, eaque accusantium ea magnam, itaque iste quis deleniti voluptatibus repellendus provident ipsa voluptatem nobis beatae harum, debitis culpa!
+    Vitae sit error adipisci unde deserunt. Reprehenderit, cumque pariatur optio totam quibusdam quidem? Incidunt distinctio placeat reiciendis veritatis laboriosam est aspernatur accusantium neque! Minima, quaerat reiciendis vel labore quo aliquid.
+    Laudantium totam omnis, accusamus atque explicabo suscipit ipsum labore dicta quis nihil error voluptatum, sint unde quasi hic perferendis necessitatibus eveniet soluta ullam, fuga modi esse libero? Cupiditate, omnis optio.
+    Unde molestiae dignissimos, culpa maiores quibusdam mollitia sunt cupiditate officia fugiat quas ullam! Reprehenderit ullam saepe ipsa unde aut pariatur eaque magnam laboriosam quae repellat. Deleniti quod temporibus doloribus doloremque!
+    Provident, sed quas numquam quidem eligendi nulla magni id animi quos reprehenderit non cumque temporibus accusamus voluptate assumenda mollitia ad autem obcaecati laborum vero minus. Quo assumenda voluptas corrupti ipsam.
+</div>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+<h3>Ejemplo Overflow Scroll</h3>
+<div id="scroll">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, consequatur laborum? Molestiae, eaque accusantium ea magnam, itaque iste quis deleniti voluptatibus repellendus provident ipsa voluptatem nobis beatae harum, debitis culpa!
+    Vitae sit error adipisci unde deserunt. Reprehenderit, cumque pariatur optio totam quibusdam quidem? Incidunt distinctio placeat reiciendis veritatis laboriosam est aspernatur accusantium neque! Minima, quaerat reiciendis vel labore quo aliquid.
+    Laudantium totam omnis, accusamus atque explicabo suscipit ipsum labore dicta quis nihil error voluptatum, sint unde quasi hic perferendis necessitatibus eveniet soluta ullam, fuga modi esse libero? Cupiditate, omnis optio.
+    Unde molestiae dignissimos, culpa maiores quibusdam mollitia sunt cupiditate officia fugiat quas ullam! Reprehenderit ullam saepe ipsa unde aut pariatur eaque magnam laboriosam quae repellat. Deleniti quod temporibus doloribus doloremque!
+    Provident, sed quas numquam quidem eligendi nulla magni id animi quos reprehenderit non cumque temporibus accusamus voluptate assumenda mollitia ad autem obcaecati laborum vero minus. Quo assumenda voluptas corrupti ipsam.
+</div>
+<br><br><br><br><br>
+<h3>Ejemplo Overflow Auto</h3>
+<div id="auto">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, consequatur laborum? Molestiae, eaque accusantium ea magnam, itaque iste quis deleniti voluptatibus repellendus provident ipsa voluptatem nobis beatae harum, debitis culpa!
+    Vitae sit error adipisci unde deserunt. Reprehenderit, cumque pariatur optio totam quibusdam quidem? Incidunt distinctio placeat reiciendis veritatis laboriosam est aspernatur accusantium neque! Minima, quaerat reiciendis vel labore quo aliquid.
+    Laudantium totam omnis, accusamus atque explicabo suscipit ipsum labore dicta quis nihil error voluptatum, sint unde quasi hic perferendis necessitatibus eveniet soluta ullam, fuga modi esse libero? Cupiditate, omnis optio.
+    Unde molestiae dignissimos, culpa maiores quibusdam mollitia sunt cupiditate officia fugiat quas ullam! Reprehenderit ullam saepe ipsa unde aut pariatur eaque magnam laboriosam quae repellat. Deleniti quod temporibus doloribus doloremque!
+    Provident, sed quas numquam quidem eligendi nulla magni id animi quos reprehenderit non cumque temporibus accusamus voluptate assumenda mollitia ad autem obcaecati laborum vero minus. Quo assumenda voluptas corrupti ipsam.
+</div>
+<h2>Modelos de Cajas en CSS: Zondas de un elemento</h2>
+Dentro de una caja, podemos encontrarnos las siguientes zonas a tener en cuenta:
+<ul>
+    <li>Top: se refiere a la parte superior del elemento</li>
+    <li>Bottom: se refiere a la parte inferior del elemento</li>
+    <li>Right: se refiere a la parte dereha del elemento</li>
+    <li>Left: se refere a la parte izquierda del elemento</li>
+    <li>Center: que hace referencia a la posición central entre los elementos.</li>
+</ul>
+Estos elementos, los podemos aplicar de la siguiente manera:
+<ul>
+    <li>margin-top / padding-top</li>
+    <li>margin-bottom / padding-bottom</li>
+    <li>margin-right / padding-right</li>
+    <li>margin-left / padding-left</li>
+</ul>
+La aplicación de estos elementos se pueden establecer de la siguiente manera:
+<ul>
+    <li>margin con un solo valor: aplica a los 4 margenes de los elementos. 
+        <br>P.E.: margin:40px;
+    </li>
+    <li>margin con dos valores: el primer valor aplica a top y bottom, y el segundo
+        <br> aplica a right y left. P.E.margin:4px 5px;
+    </li>
+    <li>margin con tres valores: el primero aplica a top, 
+        <br>el segundo aplica a right y left, y el tercero, a bottom.
+    </li>
+    <li>margin con cuatro valores: el primero aplica a top, segundo a right,
+        <br> tercero a bottom, y cuarto a left.
+    </li>
+</ul>
+MUY IMPORTANTE: Cuando establecemos valores, siempre tenemos que tener en cuenta que
+<br>se seguirá el orden de las agujas del reloj para su aplicación.
+<br> Siendo en este caso, el primer valor top, segundo right, tercero bottom y cuarto
+<br> left. P.E. margin: 4px 5px 3px 8px.
+<br>Esto no quita, que podmos aplicar un valor a un lado concreto. Es decir, podríamos
+<br>establecer un margin/padding a una única zona.P.E. margin-top:20px.
+<h2>Tipos de Bordes en CSS</h2>
+CSS nos permite utilizar diversos tipos de propiedades para utilizar en los bordes de cajas,
+<br> imágenes, tablas, etc.
+<br> Para ello, podemos utulizar la siguiente propiedad:
+<ul>
+    <li>border-color: sirve para poder dar color al borde</li>
+    <li>border-width: sirve para dar grosor al borde. Tipo: thin/medium/thick.</li>
+    <li>border-style: define el estilo del borde en CSS</li>
+</ul>
+Los tipos de bordes de border-style que podemos utilizar son los siguientes:
+<ul>
+    <li>none: no aplica ningún tipo de estilo y coge el valor por defecto.</li>
+    <li>hidden: "ocultar" los bordes</li>
+    <li>dotted: establece puntos en los bordes</li>
+    <li>dashed: establece rayas discontinuas</li>
+    <li>solid: borde sólido</li>
+    <li>double: doble línea de borde</li>
+    <li>groove: biselado de luz desde arriba</li>
+    <li>ridge: biselado de luz desde abajo</li>
+    <li>inset: establece un borde con profundidad hacia dentro</li>
+    <li>outset: establece un borde con profundidad hacia fuera</li>
+</ul>
+<br>
+<img src="../img/bordesCSS.png" alt="" width="500px">
+<br>
+<h4>Ejemplo de imágen aplicando bordes</h4>
+<img class="borde" src="../img/morti.jpg" alt="">
+<br>
+<h4>Ejemplo de bordes aplicados a una tabla.</h4>
+<table>
+    <tr>
+        <td class="verde"></td>
+        <td class="rojo"></td>
+    </tr>
+    <tr>
+        <td class="azul"></td>
+        <td class="amarillo"></td>
+    </tr>
+</table>
 </body>
 </html>
